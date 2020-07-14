@@ -1,3 +1,18 @@
+<<<<<<< Updated upstream
+=======
+# from stack import LinkedList
+# from linked_list import LinkedList
+
+# import sys
+# sys.path.append("/Users/scott/dev/lambda/CS/Data-Structures/singly_linked_list")
+# from singly_linked_list import LinkedList
+
+import os
+import sys
+sys.path.append(f'{os.getcwd()}/singly_linked_list')
+from singly_linked_list import LinkedList, Node
+
+>>>>>>> Stashed changes
 """
 A stack is a data structure whose primary purpose is to store and
 return elements in Last In First Out order. 
@@ -16,10 +31,19 @@ class Stack:
         # self.storage = ?
 
     def __len__(self):
-        pass
+        return self.size
+        # current = self.storage.head
+        # count = 0
+        # while current:
+        #     current = current.get_next()
+        #     count += 1
+        # return count
 
     def push(self, value):
-        pass
+        self.size += 1
+        return self.storage.prepend(value)
 
     def pop(self):
-        pass
+        if self.size > 0:
+            self.size -= 1
+        return self.storage.remove_head()
