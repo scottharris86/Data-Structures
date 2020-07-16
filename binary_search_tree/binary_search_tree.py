@@ -9,6 +9,9 @@ This part of the project comprises two days:
 2. Implement the `in_order_print`, `bft_print`, and `dft_print` methods
    on the BSTNode class.
 """
+
+import singly_linked_list
+
 class BSTNode:
     def __init__(self, value):
         self.value = value
